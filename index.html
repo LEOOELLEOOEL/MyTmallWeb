@@ -3,6 +3,8 @@
 
 	<head>
 		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title>天猫tmall.com--上天猫，就够了</title>
 		<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
 		<link rel="stylesheet" type="text/css" href="css/cssresets.css"/>
@@ -58,10 +60,12 @@
 		</div>
 		<div class="top_search_bar">
 			<li id="top_search_bar_img" class="iconfont">&#xe7c5;</li>
-			<input type="text" name=" top_search_bar_search" id="top_search_bar_search" style="font-size: 16px;" />
-			<label id="top_search_bar_search_label" for="top_search_bar_search"style="cursor: text;color: #8C8C8C;position: absolute;left:22.5%;margin-top: 1.5%;" >潮鞋配搭 运动一夏</label>
-			<div><button id="top_search_bar_btn">搜索</button></div>
-
+			<input type="text" name=" top_search_bar_search" id="top_search_bar_search" style="font-size: 16px;text-indent: 10px;" />
+			<label id="top_search_bar_search_label" for="top_search_bar_search"style="cursor: text;color: #8C8C8C;position: absolute;left:22.5%;margin-top: 1.4%;" >潮鞋配搭 运动一夏</label>
+			<div><button id="top_search_bar_btn" style="cursor: pointer;">搜索</button></div>
+            <div id="top_search_bar_list" style="background-color: #FFFFFF;width: 650px;margin-left: 21.6%;box-shadow:0 0 60px #8C8C8C;text-indent: 10px;">
+            	
+            </div>
 		</div>
 		<div class="mask" id="mask" style="z-index: 10000;width: 100%;height: 100%;position: fixed;">
 
@@ -158,29 +162,6 @@
 				<img id="user_support_img" src="img/user_support.png" />
 				<img id="user_nav_img" src="img/user_nav.png" />
 				<img id="user_phone_imge" src="img/erweima.png" />
-				<div class="user_account">
-					<ul class="user_account_ul">
-						<li class="user_account_li">
-							<img id="user_icon " src="img/user_icon.png" />
-							<ul>
-								<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;亲爱的&nbsp;,</li>
-								<li>&nbsp;&nbsp;qaz768299813</li>
-								<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;欢迎回来&nbsp;!</li>
-							</ul>
-						</li>
-						<li class="user_account_li" id="my_jifen">我的积分
-							<div class="fenzhi">1042</div>
-						</li>
-						<li class="user_account_li" id="youhuiquan">我的优惠券
-							<div class="shuzhi">
-								<span id="first">10</span><span id="second">张</span>
-							</div>
-						</li>
-						<li class="user_account_li">
-							<img id="shuibei " src="img/shuibei.png" />
-						</li>
-					</ul>
-				</div>
 				<div class="right_bar_hover_icon" id="right_bar_hover_icon_0" style="background-color: #BD6B09;">
 					主会场
 					<div style="color: #BD6B09;" class="right_bar_hover_icon_span">
@@ -348,10 +329,11 @@
 				</div>
 				<div class="header_search_bar">
 					<div class="header_search_div">
-						<input type="text " name="search " style="text-indent: 10px; background-color: #FFFFFF;position: absolute;" id="search_bar" placeholder=" " />
-						<label id="search_bar_label" style="cursor: text; position: absolute;left:27.8%;top: 25.5% ;color: #8C8C8C;" for="search_bar">天猫定制 大牌电器新品齐发 </label>
+						<input type="text " name="search " style="text-indent: 10px; background-color: #FFFFFF;position: absolute;" id="search_bar" placeholder=" " autocomplete="off" />
+						<label id="search_bar_label" style="cursor: text; position: absolute;left:27.8%;top: 26.5% ;color: #8C8C8C;" for="search_bar">天猫定制 大牌电器新品齐发 </label>
 						<input type="button" name="search_btn" id="search_btn" value="搜 索 " />
 					</div>
+					<div id="header_search_div_list" style="position: absolute;    width: 490px;background-color: #FFFFFF;left: 26.8%;z-index: 1000;text-indent: 10px;top: 31.5%;box-shadow: 0 0 30px #8C8C8C;"></div>
 					<div class="search_menu">
 						<ul class="search_menu_ul">
 							<li class="red ">连衣裙夏&nbsp;|&nbsp;</li>
@@ -997,11 +979,11 @@
 				<ul class="num">
 				</ul>
 			</div>
-			<div class="banner_mask">
+			<div class="banner_mask" id="banner_mask">
 
 			</div>
 		</div>
-		<div class="content">
+		<div class="content" id="content">
 			<div class="sfq">
 				<div id="subject" class="home-subjects-v2">
 					<ul>
@@ -1096,7 +1078,7 @@
 					</span>
 				</div>
 				<img class="most_hot_brand_img" src="img_hot_brands/hot_brands_big.jpg" />
-				<div class="hot_brands">
+				<div class="hot_brands" id="hot_brands">
 					<div class="hot_brands_items">
 						<div class="hot_brands_items_img">
 							<img src="img_hot_brands/hot_brands_1.jpg" />
@@ -1485,7 +1467,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="hot_brands_channel">
+				<div class="hot_brands_channel" id="hot_brands_channel">
 					<div class="hot_brands_channel_module_body">
 						<div class="hot_brands_channel_module_column">
 							<div class="hot_brands_channel_module_column_title">
@@ -4438,6 +4420,7 @@
 		<script src="js/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8">
 		</script>
 		<script src="js/header_js.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/baidu_search_js.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/menu_js.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/login_mask_js.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/Lunbo_js.js" type="text/javascript" charset="utf-8"></script>
@@ -4449,6 +4432,7 @@
 		<script src="js/start_mask_js.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/hot_brands_js.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/left_bar.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/guess_like.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 
 </html>
